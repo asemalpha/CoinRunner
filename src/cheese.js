@@ -7,7 +7,6 @@ class Cheese {
 
     this.left = CANVAS_WIDTH + 5;
     this.speed = 1;
-    this.roundness = 20;
   }
 
   drawCheese() {
