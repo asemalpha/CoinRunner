@@ -6,23 +6,29 @@ class Player {
     this.height = 150;
     this.velocity = 0;
     this.floor = 290;
+    this.jumpCount = 0;
   }
 
   preload() {
     this.img = loadImage("./images/dinosaur.png");
   }
 
-  keyIsPressed() {
+  keyPressed() {
     if (keyCode === SPACE_BAR) {
       this.jump();
     }
   }
 
   jump() {
-    this.top -= 200;
-    console.log("jump, jump");
+    if (this.jumpCount === 2) {
+      return;
+    }
+    this.top -= 50;
 
     this.velocity -= 5;
+    this.jumpCount++;
+    boing.play();
+    boing.setVolume(0.1);
   }
 
   drawPlayer() {
@@ -33,6 +39,7 @@ class Player {
     if (this.reachedTheFloor()) {
       this.top = this.floor;
       this.velocity = 0;
+      this.jumpCount = 0;
     }
   }
 

@@ -1,4 +1,5 @@
 let backgroundMusicLevel;
+let boing;
 const ARROW_RIGHT = 39;
 const ARROW_DOWN = 40;
 const ARROW_LEFT = 37;

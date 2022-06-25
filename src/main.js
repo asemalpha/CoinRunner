@@ -16,6 +16,6 @@ function draw() {
   game.play();
 }
 
-function keyIsPressed() {
-  game.keyIsPressed();
+function keyPressed() {
+  game.keyPressed();
 }
