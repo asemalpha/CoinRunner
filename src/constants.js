@@ -12,3 +12,5 @@ const CANVAS_WIDTH = 1500;
 const CANVAS_HEIGHT = 500;
 
 const GRAVITY = 0.2;
+
+const playerScore = document.querySelector(".player span");

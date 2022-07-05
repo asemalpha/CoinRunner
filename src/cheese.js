@@ -7,10 +7,15 @@ class Cheese {
 
     this.left = CANVAS_WIDTH + 5;
     this.speed = 1;
+    this.hasBeenEaten = false;
   }
 
   drawCheese() {
     image(this.image, this.left, this.top, this.width, this.height);
     this.left -= this.speed;
+  }
+
+  isEaten() {
+    this.hasBeenEaten = true;
   }
 }

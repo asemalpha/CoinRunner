@@ -7,6 +7,8 @@ class Player {
     this.velocity = 0;
     this.floor = 290;
     this.jumpCount = 0;
+    this.score = 0;
+    //this.span = span;
   }
 
   preload() {
@@ -32,6 +34,7 @@ class Player {
   }
 
   drawPlayer() {
+    // this.span.innerText = this.score;
     this.velocity += GRAVITY;
     this.top += this.velocity;
     image(this.img, this.left, this.top, this.width, this.height);
