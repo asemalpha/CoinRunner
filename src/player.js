@@ -1,18 +1,18 @@
 class Player {
-  constructor() {
-    this.left = 50;
-    this.top = 0;
-    this.width = 150;
+  constructor(left, top, span) {
+    this.left = left;
+    this.top = top;
+    this.width = 80;
     this.height = 150;
     this.velocity = 0;
     this.floor = 290;
     this.jumpCount = 0;
     this.score = 0;
-    //this.span = span;
+    this.span = span;
   }
 
   preload() {
-    this.img = loadImage("./images/dinosaur.png");
+    this.img = loadImage("./images/cheesyDino.svg");
   }
 
   keyPressed() {
@@ -34,10 +34,11 @@ class Player {
   }
 
   drawPlayer() {
-    // this.span.innerText = this.score;
+    this.span.innerText = this.score;
     this.velocity += GRAVITY;
     this.top += this.velocity;
     image(this.img, this.left, this.top, this.width, this.height);
+    //rect(this.left, this.top, this.width, this.height);
 
     if (this.reachedTheFloor()) {
       this.top = this.floor;

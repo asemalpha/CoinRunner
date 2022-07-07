@@ -2,6 +2,7 @@ let backgroundMusicLevel;
 let boing;
 let cheese;
 let box;
+let grumpy;
 const ARROW_RIGHT = 39;
 const ARROW_DOWN = 40;
 const ARROW_LEFT = 37;
@@ -13,4 +14,4 @@ const CANVAS_HEIGHT = 500;
 
 const GRAVITY = 0.2;
 
-const playerScore = document.querySelector(".player span");
+const playerScore = document.querySelector("span");
