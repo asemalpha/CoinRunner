@@ -2,7 +2,7 @@ class Player {
   constructor(left, top, span) {
     this.left = left;
     this.top = top;
-    this.width = 80;
+    this.width = 100;
     this.height = 150;
     this.velocity = 0;
     this.floor = 290;
@@ -44,6 +44,17 @@ class Player {
       this.top = this.floor;
       this.velocity = 0;
       this.jumpCount = 0;
+    }
+    if (keyIsDown(ARROW_LEFT)) {
+      if (this.left > 0) {
+        this.left -= 1;
+      }
+    }
+
+    if (keyIsDown(ARROW_RIGHT)) {
+      if (this.left < 500) {
+        this.left += 1;
+      }
     }
   }
 

@@ -79,7 +79,7 @@ class Game {
     const isLeftOfASmallerThanRightOfB = leftOfA <= rightOfB;
 
     const rightOfA = player.width + player.left;
-    const leftOfB = cheese.left;
+    const leftOfB = cheese.left + 30;
     const isRightOfABiggerThanLeftOfB = rightOfA >= leftOfB;
 
     return (
@@ -92,5 +92,9 @@ class Game {
 
   keyPressed() {
     this.player.keyPressed();
+  }
+
+  keyIsDown() {
+    this.player.keyIsDown();
   }
 }
